@@ -29,6 +29,7 @@ namespace marsrover.console
                 RunRoverCommand(rover, command);
             }
         }
+
         private void RunRoverCommand(Rover rover, IRoverActionCommand command)
         {
             command.Run(rover);

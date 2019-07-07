@@ -40,6 +40,5 @@ namespace marsrover.test
             var actual = validator.Validate(input);
             Assert.False(actual);
         }
-
     }
 }

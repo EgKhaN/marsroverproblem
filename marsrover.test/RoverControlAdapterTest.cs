@@ -18,6 +18,7 @@ namespace marsrover.test
             var adapter = new RoverControlAdapter();
             adapter.ProcessInput(input);
             var actual = adapter.Controller.Rovers.Select(x => x.Position.ToString()).ToArray();
+
             Assert.Equal(expected[0], actual[0]);
             Assert.Equal(expected[1], actual[1]);
         }

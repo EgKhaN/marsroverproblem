@@ -19,6 +19,5 @@ namespace marsrover.console
         {
             return _cardinalPoint2StringDict[p];
         }
-
     }
 }

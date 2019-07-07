@@ -21,8 +21,8 @@ namespace marsrover.test
                 Heading = inital
                 }
             };
-
             command.Run(rover);
+
             Assert.Equal(expected, rover.Position.Heading);
         }
     }

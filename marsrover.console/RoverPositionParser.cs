@@ -10,6 +10,7 @@ namespace marsrover.console
         {
             RoverPosition = roverPosition;
         }
+
         public Position GetPosition()
         {
             var arrPosition = RoverPosition.Split(' ', StringSplitOptions.RemoveEmptyEntries);

@@ -21,6 +21,5 @@ namespace marsrover.test
             var actual = position.ToString();
             Assert.Equal(expected, actual);
         }
-
     }
 }

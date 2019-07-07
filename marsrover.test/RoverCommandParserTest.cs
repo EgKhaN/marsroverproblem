@@ -14,6 +14,7 @@ namespace marsrover.test
                 Commands = "L"
             };
             var commandList = parser.GetCommands();
+
             Assert.Single(commandList);
             Assert.True(commandList[0] is RoverTurnLeftCommand);
         }
@@ -26,6 +27,7 @@ namespace marsrover.test
                 Commands = "R"
             };
             var commandList = parser.GetCommands();
+
             Assert.Single(commandList);
             Assert.True(commandList[0] is RoverTurnRightCommand);
         }
@@ -38,6 +40,7 @@ namespace marsrover.test
                 Commands = "M"
             };
             var commandList = parser.GetCommands();
+
             Assert.Single(commandList);
             Assert.True(commandList[0] is RoverMoveForwardCommand);
         }
@@ -47,11 +50,11 @@ namespace marsrover.test
         {
             var parser = new RoverCommandParser("LRM");
             var commandList = parser.GetCommands();
+
             Assert.Equal(3, commandList.Count);
             Assert.True(commandList[0] is RoverTurnLeftCommand);
             Assert.True(commandList[1] is RoverTurnRightCommand);
             Assert.True(commandList[2] is RoverMoveForwardCommand);
         }
-
     }
 }

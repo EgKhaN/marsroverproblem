@@ -19,6 +19,7 @@ namespace marsrover.test
                 Heading = CardinalPoints.North
             };
             var rover = controller.DeployRover(position);
+
             Assert.Equal(position.X, rover.Position.X);
             Assert.Equal(position.Y, rover.Position.Y);
             Assert.Equal(position.Heading, rover.Position.Heading);
@@ -35,6 +36,7 @@ namespace marsrover.test
                 Heading = CardinalPoints.North
             };
             var rover = controller.DeployRover(position);
+
             Assert.Single(controller.Rovers);
             Assert.Same(rover, controller.Rovers[0]);
         }
@@ -49,6 +51,7 @@ namespace marsrover.test
             };
             var rover = controller.DeployRover(new Position { X = 10, Y = 10, Heading = CardinalPoints.North });
             controller.RunRoverCommans(rover, commandList);
+
             Assert.Equal(1, ((MockRoverActionCommand) commandList[0]).RunCount);
             Assert.Equal(1, ((MockRoverActionCommand) commandList[1]).RunCount);
         }

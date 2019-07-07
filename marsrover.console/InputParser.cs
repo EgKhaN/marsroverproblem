@@ -7,7 +7,6 @@ namespace marsrover.console
     {
         public int PlateauHeight { get; set; }
         public int PlateauWidth { get; set; }
-
         public List<RoverInputModel> Rovers { get; set; } = new List<RoverInputModel>();
         private readonly string[] _input;
 

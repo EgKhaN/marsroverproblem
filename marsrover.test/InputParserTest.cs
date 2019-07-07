@@ -6,7 +6,6 @@ namespace marsrover.test
 {
     public class InputParserTest
     {
-
         [Fact]
         public void Parse_ExampleInput_ProperPlateauSize()
         {

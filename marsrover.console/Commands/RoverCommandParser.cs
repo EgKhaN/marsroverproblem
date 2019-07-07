@@ -6,7 +6,6 @@ namespace marsrover.console.Commands
     public class RoverCommandParser
     {
         public string Commands { get; set; }
-
         public RoverCommandParser() { }
 
         public RoverCommandParser(string commands)
@@ -34,6 +33,5 @@ namespace marsrover.console.Commands
             }
             return commandList;
         }
-
     }
 }

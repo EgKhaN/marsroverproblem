@@ -7,6 +7,7 @@ namespace marsrover.console.Commands
         Dictionary<CardinalPoints, Coordinate> _moveOffsets = new Dictionary<CardinalPoints, Coordinate>()
         { { CardinalPoints.North, new Coordinate(0, 1) }, { CardinalPoints.East, new Coordinate(1, 0) }, { CardinalPoints.South, new Coordinate(0, -1) }, { CardinalPoints.West, new Coordinate(-1, 0) }
         };
+
         public void Run(Rover rover)
         {
             var offsetCoordinate = _moveOffsets[rover.Position.Heading];

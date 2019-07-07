@@ -26,6 +26,7 @@ namespace marsrover.test
             };
 
             command.Run(rover);
+
             Assert.Equal(heading, rover.Position.Heading);
             Assert.Equal(expectedX, rover.Position.X);
             Assert.Equal(expectedY, rover.Position.Y);
