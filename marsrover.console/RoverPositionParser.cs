@@ -13,6 +13,7 @@ namespace marsrover.console
 
         public Position GetPosition()
         {
+            // Example position: 5 5 E
             var arrPosition = RoverPosition.Split(' ', StringSplitOptions.RemoveEmptyEntries);
             var x = Convert.ToInt32(arrPosition[0]);
             var y = Convert.ToInt32(arrPosition[1]);

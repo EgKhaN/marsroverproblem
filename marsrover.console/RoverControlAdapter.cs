@@ -3,6 +3,7 @@ namespace marsrover.console
     public class RoverControlAdapter
     {
         public RoverController Controller { get; private set; }
+
         public void ProcessInput(string[] input)
         {
             var inputParser = new InputParser(input);

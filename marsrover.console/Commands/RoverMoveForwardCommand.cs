@@ -10,6 +10,8 @@ namespace marsrover.console.Commands
 
         public void Run(Rover rover)
         {
+            // get precalculated offsets for each cardinal point and 
+            // add it to the rover's current position
             var offsetCoordinate = _moveOffsets[rover.Position.Heading];
             rover.Position.X += offsetCoordinate.X;
             rover.Position.Y += offsetCoordinate.Y;

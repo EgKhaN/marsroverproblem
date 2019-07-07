@@ -7,6 +7,7 @@ namespace marsrover.console
     {
         public List<Rover> Rovers { get; set; } = new List<Rover>();
         public Plateau Plateau { get; private set; }
+
         public RoverController(Plateau plateu)
         {
             Plateau = plateu;

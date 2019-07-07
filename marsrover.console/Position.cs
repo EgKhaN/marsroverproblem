@@ -8,6 +8,7 @@ namespace marsrover.console
 
         public override string ToString()
         {
+            //the output 
             var enumConverter = new CardinalPointEnumConverter();
             var strHeading = enumConverter.ToString(Heading);
             return $"{X} {Y} {strHeading}";

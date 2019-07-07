@@ -15,6 +15,7 @@ namespace marsrover.console.Commands
 
         public List<IRoverActionCommand> GetCommands()
         {
+            // Example commands: LRMLMRMLRMRLMRML
             var commandList = new List<IRoverActionCommand>();
             foreach (var commandIdentifier in Commands)
             {
