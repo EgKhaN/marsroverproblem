@@ -7,7 +7,43 @@ namespace marsrover.test
     public class RoverCommandParserTest
     {
         [Fact]
-        public void GetCommandsTest()
+        public void GetCommands_L_LeftCommand()
+        {
+            var parser = new RoverCommandParser()
+            {
+                Commands = "L"
+            };
+            var commandList = parser.GetCommands();
+            Assert.Equal(commandList.Count, 1);
+            Assert.True(commandList[0] is RoverTurnLeftCommand);
+        }
+
+        [Fact]
+        public void GetCommands_R_RightCommand()
+        {
+            var parser = new RoverCommandParser()
+            {
+                Commands = "R"
+            };
+            var commandList = parser.GetCommands();
+            Assert.Equal(commandList.Count, 1);
+            Assert.True(commandList[0] is RoverTurnRightCommand);
+        }
+
+        [Fact]
+        public void GetCommands_M_MoveCommand()
+        {
+            var parser = new RoverCommandParser()
+            {
+                Commands = "M"
+            };
+            var commandList = parser.GetCommands();
+            Assert.Equal(commandList.Count, 1);
+            Assert.True(commandList[0] is RoverMoveForwardCommand);
+        }
+
+        [Fact]
+        public void GetCommands_LRM_LeftRightMoveCombinedList()
         {
             var parser = new RoverCommandParser()
             {
@@ -21,7 +57,7 @@ namespace marsrover.test
         }
 
         [Fact]
-        public void GetPositionTest()
+        public void GetPosition_ProperPosition_SameValuePositionObject()
         {
             var parser = new RoverCommandParser()
             {
