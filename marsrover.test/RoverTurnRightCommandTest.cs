@@ -11,7 +11,7 @@ namespace marsrover.test
         [InlineData(CardinalPoints.East, CardinalPoints.South)]
         [InlineData(CardinalPoints.South, CardinalPoints.West)]
         [InlineData(CardinalPoints.West, CardinalPoints.North)]
-        public void CanTurnProperly(CardinalPoints inital, CardinalPoints expected)
+        public void CanTurnRightProperly(CardinalPoints inital, CardinalPoints expected)
         {
             var command = new RoverTurnRightCommand();
             var rover = new Rover
