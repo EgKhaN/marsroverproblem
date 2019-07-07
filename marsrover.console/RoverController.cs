@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using marsrover.console.Commands;
 
 namespace marsrover.console
 {
@@ -21,5 +22,16 @@ namespace marsrover.console
             return rover;
         }
 
+        public void RunRoverCommans(Rover rover, List<IRoverActionCommand> commands)
+        {
+            foreach (var command in commands)
+            {
+                RunRoverCommand(rover, command);
+            }
+        }
+        private void RunRoverCommand(Rover rover, IRoverActionCommand command)
+        {
+            command.Run(rover);
+        }
     }
 }
