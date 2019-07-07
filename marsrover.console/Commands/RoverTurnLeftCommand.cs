@@ -4,7 +4,14 @@ namespace marsrover.console.Commands
     {
         public void Run(Rover rover)
         {
-            throw new System.NotImplementedException();
+            if (rover.Position.Heading - 1 < CardinalPoints.North)
+            {
+                rover.Position.Heading = CardinalPoints.West;
+            }
+            else
+            {
+                rover.Position.Heading--;
+            }
         }
     }
 }
