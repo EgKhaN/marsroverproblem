@@ -1,7 +1,6 @@
 using System;
 using marsrover.console;
 using marsrover.console.Commands;
-using marsrover.console.Position;
 using Xunit;
 namespace marsrover.test
 {
