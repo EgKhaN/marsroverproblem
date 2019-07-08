@@ -40,3 +40,10 @@ MMRMMRMRRM
 1 3 N
 5 1 E
 ```
+
+## Run
+
+```sh
+cd marsrover.console
+dotnet run -- exampleinput.txt
+```
